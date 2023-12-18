@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <p>Word Matcher - Loading</p>
+    </div>
+    <header>
+        <h1>Word Matcher</h1>
+        <p>Match the word with its correct definition</p>
+        <p>Some words you may never have seen or read before because our time uses random word APIs and dictionary APIs to get new words every time you reload the page.</p>
+        <p>Score: <span id="score">0</span></p>
+    </header>
+    <main>
+        <div id="word-cards" class="word-container">word</div>
+        <div id="definition-cards" class="definition-container">definition</div>
+    </main>
+    <footer>
+        <p id="feedback-section"></p>
+        <div id="summary-container" style="display: none;"></div>
+        <button id="play-again-button" onclick="playAgain()">Play Again</button>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+        const draggableElements = document.querySelectorAll('.draggable');
+        draggableElements.forEach(element => {
+            element.ontouchstart = touchStart;
+            element.ontouchmove = touchMove;
+            element.ontouchend = touchEnd;
+        });
+    </script>
+</body>
+</html>

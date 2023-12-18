@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background-color: #bbbbbb;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.container-label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.word-container,
+.definition-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    border: 2px solid #bbbbbb;
+    padding: 10px;
+    width: 900px; 
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 0 auto 20px;
+}
+
+.container-label {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.draggable {
+    margin: 5px;
+    padding: 10px;
+    background-color: #bbbbbb;
+    border: 2px dashed #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: grab;
+}
+
+.droppable {
+    margin: 5px;
+    padding: 10px;
+    background-color: #bbbbbb;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 116, 116, 0.679);
+    color: white;
+    font-size: 24px;
+    z-index: 9999;
+}
+
+#feedback-section {
+    text-align: center;
+    margin-top: 20px;
+    color: #bbbbbb;
+    opacity: 1; 
+    transition: opacity 0.5s ease; 
+}
